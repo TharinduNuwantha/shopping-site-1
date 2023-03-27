@@ -1,0 +1,82 @@
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+/*------------------- Reamoing Margins -----------------------------*/
+
+body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{
+    margin: 0;
+}
+
+/* -------------------------REAMOI LISTSTYLS-------------------------- */
+
+ul[role="list"],
+ol[role="list"]{
+    list-style: none;
+}
+
+/* -----------------set core root defaults---------------------- */
+
+body{
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* --------A eliment tht don't have a class get default style----------------------- */
+
+a:not([class]){
+    text-decoration-style: auto;
+}
+/* ----------------------------make image easier to work width---------------------------- */
+img,picture{
+    max-width: 100%;
+    display: block;
+}
+/* --------------------------Inherit fonts for inputs and button-------------------------- */
+input,button,textarea,select{
+    font: inherit;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Remove all animaction, transition & smooth scroll for pepole that prefer  not to see them*/
+@media(Prefers-reduced-motion:reduce){
+    html:focus-within{
+        scroll-behavior: auto;
+    }
+    *,*::after,*::before{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01s !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* =============================End of Genarel E=reset================================= */
+
+/* --------------------------SOme importent  Utolity Class------------------------
+ */
+ body{
+    overflow-x: hidden;
+ }
+ /* ==============================componet utlity classses============================= */
+ .uil{
+    cursor: pointer;
+ }
+ .flex{
+    display: flex;
+    /* gap ----,1rem; VIDEO 11.52*/
+    
+ }
+ .grid{
+    display:grid;
+    /* flex-wrap: ----,1rem; */
+    
+ }
+ .container{
+    width: 96vw;
+    margin-inline: auto;
+    padding-inline: 2rem;
+ }

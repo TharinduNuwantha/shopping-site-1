@@ -1,0 +1,586 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.clear{
+    clear: both;
+}
+.view_more_mutton{
+    max-width: 150px;
+   margin-top: 20px;
+    text-align: center;
+}
+.view_more_mutton a{
+    text-decoration: none;
+}
+.view_more_mutton p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(199, 98, 98);
+     font-size: 14px;
+   
+}
+.view_more_mutton p:hover{
+    color: blue;
+    font-weight: 500;
+}
+#sfid{
+    position: relative;
+    bottom: 20px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    height: 120px;
+    font-family: 'Roboto', sans-serif;
+
+}
+nav .logo img{
+    width: 6rem;
+    margin: 1rem 2rem;
+  /* position: fixed; */
+}
+nav ul{
+    display: flex;
+    line-height: 100px;
+}
+nav ul li{
+   list-style: none;
+   padding: 0 1.1rem;
+}
+nav .topicones{
+    display: flex;
+    line-height: 100px;
+}
+nav .topicones .icon{
+    padding: 0 1.1rem;
+   width: 100%;
+   
+   
+}
+nav .topicones{
+    
+}
+nav label{
+    width: 100;
+    padding: 10px;
+    line-height: 100px;
+}
+nav label i{
+    font-size: 20px;
+}
+#s1,#s2{
+    float: right;
+      display: none;  
+      /* padding: 35px 25px; */
+      position: relative;
+      top: 44px;
+      right: 25px;
+      font-size: 25px;
+      z-index: 13;
+}
+#chbox{
+    display: none;
+}
+nav .topicones span{
+    display: block;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #FF7F00;
+    position: absolute;
+    top:2.2rem;
+    right: 0.80rem;
+    border-radius: 50%;
+}
+@media(max-width:928px){
+    nav .logo img{
+        width: 5rem;
+    }
+    nav ul li{
+        position: relative;
+        top: 4rem;
+        padding: 0 0.8rem;
+
+    }
+    nav .topicones .icon{
+        padding: 0 0.8rem;
+    }
+}
+
+.show{
+    left: 0;
+}
+.hide{
+    display: none;
+}
+@media(max-width:695px){
+    nav .topicones{
+        display: none;
+        
+    }
+    nav ul li{
+        
+    }
+    #s1{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        left: -100%;
+        height: 100vh;
+        background-color: rgb(252, 252, 252);
+        top: 0px;
+        text-align: center;
+        transition: 0.5s;
+        z-index: 10;
+        display: block;
+
+    }
+    nav .logo img{
+        position: absolute;
+        top: 10px;
+    }
+    nav ul li{
+        
+        margin:-15px auto;
+        
+    }
+    #chbox:checked ~ ul{
+        left: 0;
+        background-color: rebeccapurple;
+    } 
+    .searchBar{
+        margin-top: -10px;
+    }
+
+}
+
+.searchsection{
+    position: sticky;
+    top: -1px;
+    background-color: #FF7F00;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    margin-top: 10px;
+    z-index: 9;
+}
+.searchBar{
+    line-height: 65px;
+    width: 100%;
+    padding-top: 6px;
+
+}
+.searchBar input{
+    width: 60%;
+    line-height: 35px;
+    margin: 0 0 0 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: none;
+    padding: 0 20px;
+    
+}
+.searchBar input:focus{
+    outline: red;
+    transition: 0.5s;
+}
+.searchBar button{
+    width: 50px;
+    height: 35px;
+    background-color: #FFDC00;
+    border: none;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.auto_com_box{
+  
+    margin: auto    ;
+    background-color: aliceblue;
+    max-width: 610px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+    margin-top: 10px;
+ 
+}
+.auto_com_box li{
+    font-family:  sans-serif;
+    list-style: none;
+    /* padding: -50px 0px; */
+    /* padding: 5px 0px; */
+    color: rgb(53, 52, 52);
+    margin: -10px 0px;
+    line-height: 60px;
+    
+}
+.auto_com_box li:hover{
+    background-color: #eeeeee;
+    color: rgb(0, 0, 0);
+}
+.box{
+    width: 130px;
+    height: 160px;
+    background-color: rebeccapurple;
+    position: relative;
+    bottom: 50px;
+}
+.bottom_countrol_bar{
+    display: none;
+}
+.nav_bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 0 3px rgb(66, 64, 64);
+    background: rgb(253,29,29);
+    background: linear-gradient(77deg, rgba(253,29,29,1) 0%, rgba(255,127,0,1) 50%, rgba(253,29,29,1) 100%);
+    overflow-x: auto;
+    display: flex;
+    
+}
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family:Candara;
+    font-size: 14px;
+    color: #eeeeee;
+    text-decoration: none;
+    -webkit-top-highlight-color:transparent;
+    transition: background-color 0.1s ease-in;
+}
+.bottom_countrol_bar span{
+    margin-top: px;
+}
+.nav_links:hover{
+    /* background-color: #FF7F00;
+    border-radius: 50% 50%; */
+}
+.nav_links{
+    padding: 25px 0px;
+}
+
+/**=.*=.*=.*=.*=.*=.*=.*=./*.=.*=.*.*=..=*=.=*.*=..=*=.=*.=*.=*.=.*=*.=.=*.=.*.=.=*.*=*.=.**/
+
+@media(max-width:783px){
+    .bottom_countrol_bar{
+        display: block;
+    }
+    .side_navbar{
+        display: none;
+    }
+
+
+}
+/*====================== </div><!--contaner--> START =====================*/
+.contaner{
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 35px;
+   
+}
+/*======================== Seide Catagary bar =================================*/
+ 
+.side_navbar{
+    width: 250px;
+    background-color: #d6d6d6;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: left;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 25px;
+}
+.side_navbar .logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-weight: 530;
+    font-size: 25px;
+    border: 3px solid #FF7F00;
+    border-radius: 15px;
+}
+.side_navbar .logo p{
+    font-family: 'Secular One', sans-serif;
+}
+.side_navbar .logo i{
+    font-size: 25px;
+    color: #3d3d3d;
+}
+.side_navbar .catagary{
+    padding: 15px 10px;
+}
+.side_navbar .catagary ul{
+    list-style: none;
+    
+}
+.side_navbar .catagary ul li{
+    padding: 7px 10px;
+    
+}
+.side_navbar .catagary ul li a{
+    text-decoration: none;
+    color: #2b2b2b;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.side_navbar .catagary ul li #a_tag:hover{
+    font-weight: 550;
+  font-size: 18px;
+  
+}
+.sub_menu{
+  background-color: rgb(231, 230, 230);
+  padding: 10px;
+  position: absolute;
+  width: 67%;
+  left: 210px;
+  border-radius: 20px;
+  visibility: hidden;
+}
+.sub_menu .fist_row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.sub_menu .fist_row .sub_menu_item{
+    width: 110px;
+    text-align: center;
+}
+.sub_menu .fist_row .sub_menu_item img{
+   
+    width: 110px;
+}
+.sub_menu .fist_row .sub_menu_item #title{
+  font-size: 17px;
+  color: #3d3d3d;
+  padding: 5px 0px;
+}
+.sub_menu .fist_row .sub_menu_item #price{
+    font-size: 18px;
+   padding: 0 10px; 
+  display: flex;
+  justify-content: space-between;
+}
+.side_navbar .catagary ul li:hover .sub_menu{
+   visibility: visible;
+}
+.sub_menu .sub_menu_item:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.sub_menu #view_more{
+    margin: 10px 25px;
+    padding: 10px 25px;
+    background-color: rgb(41, 88, 10);
+    color: rgb(255, 255, 255);
+    border: none;
+    transition: .2s ease-in;
+
+}
+.sub_menu #view_more:hover{
+    /* padding: 12px 30px; */
+    background-color: #e27201;
+    border: yellow 1px solid white;
+}
+/*======================== Seide Catagary bar End=================================*/
+
+/*================================just for you ==================================*/
+.sujust_for_you{
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-family: NMicrosoft ,sans-serif;
+
+}
+.sujust_for_you p:first-child{
+    color: rgb(77, 77, 75);
+    font-size: 25px;
+    font-family: MS PGothic;
+    padding: 10px 25px;
+    position: relative;
+    left: 15px;
+    font-weight: bold;
+}
+.sujust_for_you .sujust_list{
+    padding: 10px;
+}
+.sujust_for_you .row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.sujust_for_you .product{
+    max-width: 170px;
+    background-color: rgb(255, 253, 253);
+    margin: 10px 0px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.sujust_for_you .product:hover.product{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.sujust_for_you .product img{
+    width: 170px;
+}
+.sujust_for_you .product .p_name{
+    color: #313131;
+    padding: 2px 10px 6px 10px;
+}
+.sujust_for_you .product #price{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+}
+
+@media(max-width:783px){
+    .sujust_for_you{
+       
+       overflow: visible;
+    }
+    .sujust_for_you .product{
+        max-width: 200px;
+    }
+}
+@media(max-width:918px){
+       .jf9,.jf8,.jf7{
+          display: none;
+    }
+}
+/*================================just for you END ==================================*/
+
+/*=================================  Anywon 20$ bar ==============================*/
+.main_row{
+    width: 100%;
+   
+}
+.main_row .row{
+    margin-top: 25px;
+}
+.main_row .main_title{
+    width: 100%;
+    border-radius: 20px;
+    background-color: #e27201;
+}
+.main_row .main_title i{
+    padding: 0 5px;
+}
+.main_row .main_title p{
+    color: #eeeeee;
+    padding:  10px 35px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+     margin-left: 15px;
+}
+.main_row .product{
+    max-width: 170px;
+    background-color: rgb(255, 253, 253);
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.main_row .product:hover.product{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.main_row .product img{
+    width: 170px;
+}
+.main_row .name_title p{
+    color: #1f1e1e;
+    padding: 2px 10px 6px 10px;
+    font-family:  NMicrosoft ,sans-serif;
+}
+.main_row .price_bar{
+    display: flex;
+    justify-content:  NMicrosoft ,sans-serif;
+    justify-content: space-between;
+    padding:0 25px;
+}
+.main_row .price_bar p{
+    font-family:  NMicrosoft ,sans-serif;
+    font-family: 28px;
+}
+.main_row .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*=================================  Anywon 20$ bar END ==============================*/
+
+/*=============================== Doller Filter ======================================*/
+/*=============================== Doller Filter ======================================*/
+.anythinfor_filtr{
+    background: rgb(210,123,202);
+background: linear-gradient(77deg, rgba(210,123,202,1) 0%, rgba(71,0,212,1) 50%, rgba(17,199,210,1) 100%);
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 100px 10px;
+    margin: 50px 0px 50px 0px;
+    font-family: Corbel;
+    flex-wrap: wrap;
+}
+.anythinfor_filtr p{
+    font-size: 24px;
+    color: aliceblue;
+    font-weight: 530;
+    margin: 0 10px;
+}
+.anythinfor_filtr:hover{
+    
+}
+.anythinfor_filtr input{
+    width: 55px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+    color: #d6d6d6;
+    font-weight: 6800px;
+    
+}
+.anythinfor_filtr button{
+    margin: 0 20px;
+    padding: 13px 55px;
+    border-radius: 25px;
+    background-color: #f1dc18;
+    color: #1a1919;
+    font-weight: 540;
+    border: none;
+    font-size: 15px;
+    font-family:Verdana
+}
+.anythinfor_filtr button:hover{
+    color: #313131;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+#dls{
+    font-size: 30px;
+}
+@media(max-width:556px){
+    .anythinfor_filtr button{
+        margin-top: 20px;
+    }
+}
+@media(max-width:333px){
+    .anythinfor_filtr #dls{
+        display: none;
+    }
+}
+/*=============================== Doller Filter END ======================================*/
+/*=============================== Doller Filter END ======================================*/
+
+
+

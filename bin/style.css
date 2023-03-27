@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+.menu_bar{
+    background-color: blueviolet;
+    text-align: center;
+    width: 250px;
+    float: left;
+}
+.menu_bar ul{
+    display: block;
+    list-style: none;
+    color: aliceblue;
+}
+.menu_bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu_bar ul li a{
+    text-decoration: none;
+    color: aliceblue
+}
+.active,.menu_bar ul li a:hover{
+    background-color: rgb(46, 177, 34);
+    color: red;
+    padding: 5px 15px;
+}
+.sub_menu{
+ background-color: rgb(194, 124, 19);
+ display: flex;
+ position:absolute;
+ padding: 10px;
+ left: 125px;
+ top: -5px;
+ visibility: hidden;
+}
+.menu_bar ul li:hover .sub_menu{
+  visibility: visible;
+
+}
+.menu_bar ul li:hover .sub_menu ul{
+
+}
